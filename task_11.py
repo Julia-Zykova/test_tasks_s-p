@@ -36,10 +36,18 @@ class Desert:
 
 	def is_healfy(self):
 		if ((isinstance(self._calories, int)) == True):
-			print(self._calories <= 200)
+			return (self._calories <= 200)
 		else:
-			print(isinstance(self._calories,int))
+			return (isinstance(self._calories,int))
 
 
 	def is_delicios(self):
-		print(True)
+		return True
+
+c = Desert("Cupcake", 201)
+print(c.is_delicios())
+print(c.is_healfy())
+
+p = Desert("Pancake", 195)
+print(p.is_delicios())
+print(p.is_healfy())

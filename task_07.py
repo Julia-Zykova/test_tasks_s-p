@@ -25,4 +25,6 @@ def combine_anagrams(words_array):
 	print(new_array)
 
 
-combine_anagrams(["cars", "for", "potatoes", "racs", "four", "scar", "creams", "scream"]) 
+combine_anagrams([
+	"cars", "for", "potatoes", "racs", "four", "scar", "creams", "scream",
+	]) 

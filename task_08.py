@@ -2,7 +2,8 @@ def multiply_numbers(inputs = []):
 	from functools import reduce
 
 
-	inputs = ((str(inputs)).split(".")) if (type(inputs) == float) else list(inputs)
+	inputs = (
+		(str(inputs)).split(".")) if (type(inputs) == float) else list(inputs)
 	
 	new_list = []
 
