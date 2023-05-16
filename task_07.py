@@ -22,7 +22,7 @@ def combine_anagrams(words_array):
 				new_array.append(list_anagr)
 				
 		
-	print(new_array)
+	return new_array
 
 
 combine_anagrams([

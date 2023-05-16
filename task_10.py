@@ -12,7 +12,7 @@ def count_words(string):
 		ind = [a for a in range(len(string)) if string[a] == s]
 		d[s] = string.count(s)
 
-	print(d)
+	return d
 
 
 count_words("A man, a plan, a canal -- Panama") 

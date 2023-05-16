@@ -1,4 +1,4 @@
-class Desert:
+class Dessert:
 
 	def __init__(self, name = None, calories = None):
 		self._name = name
@@ -44,7 +44,7 @@ class Desert:
 	def is_delicios(self):
 		return True
 
-class JellyBean(Desert):
+class JellyBean(Dessert):
 	def __init__(self, name = None, calories = None, flavor = None):
 		super().__init__(name = None, calories = None)
 		self._flavor = flavor

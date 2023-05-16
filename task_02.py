@@ -12,7 +12,7 @@ def coincidence(list = [], range = ()):
             intersect.add(i)
 
     
-    print(sorted(intersect))
+    return sorted(intersect)
     
     
 coincidence([1,2,3,4,5], range(3,6))

@@ -17,9 +17,9 @@ def max_odd(array):
 	odd_num.sort()
 
 	if len(odd_num) > 0:
-		print(odd_num[-1])
+		return (odd_num[-1])
 	else:
-		print(None)
+		return None
 	
 
 max_odd([1, 2, 3, 4, 4])

@@ -1,4 +1,4 @@
-class Desert:
+class Dessert:
 
 	def __init__(self, name = None, calories = None):
 		self._name = name
@@ -44,10 +44,10 @@ class Desert:
 	def is_delicios(self):
 		return True
 
-c = Desert("Cupcake", 201)
+c = Dessert("Cupcake", 201)
 print(c.is_delicios())
 print(c.is_healfy())
 
-p = Desert("Pancake", 195)
+p = Dessert("Pancake", 195)
 print(p.is_delicios())
 print(p.is_healfy())

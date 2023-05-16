@@ -2,36 +2,40 @@ def rps_game_winner(arg):
 	
 	rps = ['R', 'P','S']
 
+	first_player = arg[0][0]
+	second_player = arg[1][0]
+	first_player_move = arg[0][1]
+	second_player_move = arg[1][1]
+
+
 	if len(arg) > 2:
-		return print('WrongNumberOfPlayersError')
+		return 'WrongNumberOfPlayersError'
 
 	for i in arg:
 		if i[1] not in rps:
-			return print('NoSuchStrategyError')
+			return 'NoSuchStrategyError'
 
 
-	if arg[0][1] == "R" and arg[1][1] == "P":
-		print("'player2 P'")
+	if first_player_move == "R" and second_player_move == "P":
+		return (f"{second_player} {second_player_move}")
 
-	elif arg[0][1] == "R" and arg[1][1] == "S":
-		print("'player1 R'")
+	elif first_player_move == "R" and second_player_move == "S":
+		return (f"{first_player} {first_player_move}")
 
-	elif arg[0][1] == "P" and arg[1][1] == "S":
-		print("'player2 S'")
+	elif first_player_move == "P" and second_player_move == "S":
+		return (f"{second_player} {second_player_move}")
 
-	elif arg[0][1] == "P" and arg[1][1] == "R":
-		print("'player1 P'")
+	elif first_player_move == "P" and second_player_move == "R":
+		return (f"{first_player} {first_player_move}")
 
-	elif arg[0][1] == "S" and arg[1][1] == "R":
-		print("'player2 R'")
+	elif first_player_move == "S" and second_player_move == "R":
+		return (f"{second_player}  {second_player_move}")
 
-	elif arg[0][1] == "S" and arg[1][1] == "P":
-		print("'player1 S'")
+	elif first_player_move == "S" and second_player_move == "P":
+		return (f"{first_player} {first_player_move}")
 
-	elif arg[0][1] == arg[1][1]:
-		print(f"'player1 {arg[0][1]}'")
-
-
+	elif first_player_move == second_player_move:
+		return (f"{first_player} {first_player_move}")
 
 
 rps_game_winner([['player1', 'P'], ['player2', 'S'], ['player3', 'S']])

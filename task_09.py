@@ -33,7 +33,7 @@ def connect_dicts(dict1, dict2):
 	sorted_list = sorted(dict3.items(),reverse = True)
 	sorted_dict3 = {k: v for k, v in sorted_list}
 	
-	print(sorted_dict3)
+	return sorted_dict3
 
 
 connect_dicts({ "a": 2, "b": 12 }, { "c": 11, "e": 5 })

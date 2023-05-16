@@ -1,4 +1,4 @@
-def sort_list(list = []):
+def sort_list(list):
 
 	new_list = []
 	min_num = []
@@ -24,7 +24,7 @@ def sort_list(list = []):
 				new_list.append(max_num)
 
 		
-	print(new_list)
+	return new_list
 
 sort_list([])
 sort_list([2, 4, 6, 8])

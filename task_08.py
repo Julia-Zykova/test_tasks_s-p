@@ -1,7 +1,6 @@
 def multiply_numbers(inputs = []):
 	from functools import reduce
 
-
 	inputs = (
 		(str(inputs)).split(".")) if (type(inputs) == float) else list(inputs)
 	
@@ -26,10 +25,10 @@ def multiply_numbers(inputs = []):
 		
 	try:
 		result = reduce((lambda a,b: a*b), (i for i in new_list))
-		print(result)
+		return result
 
 	except:
-		print(None)
+		return None
 
 multiply_numbers()
 multiply_numbers('ss')
