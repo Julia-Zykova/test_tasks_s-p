@@ -41,7 +41,7 @@ class Dessert:
 			print(isinstance(self._calories,int))
 
 
-	def is_delicios(self):
+	def is_delicious(self):
 		return True
 
 class JellyBean(Dessert):
@@ -56,13 +56,9 @@ class JellyBean(Dessert):
 	def get_flavor(self):
 		return self._flavor
 
-	def is_delicios(self):
+	def is_delicious(self):
 		if self._flavor != 'black licorice':
 			return True
 		else:
 			return False
 
-			
-		
-j = JellyBean("BertyBobs", 175, 'black licorice')
-print(j.is_delicios())

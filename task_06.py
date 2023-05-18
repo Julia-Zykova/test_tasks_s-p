@@ -8,12 +8,19 @@ def rps_game_winner(arg):
 	second_player_move = arg[1][1]
 
 
-	if len(arg) > 2:
+	try:
+		if len(arg) > 2:
+			raise Exception('WrongNumberOfPlayersError')
+
+	except Exception:
 		return 'WrongNumberOfPlayersError'
 
-	for i in arg:
-		if i[1] not in rps:
-			return 'NoSuchStrategyError'
+	try:
+		for i in arg:
+			if i[1] not in rps:
+				raise Exception('NoSuchStrategyError')
+	except Exception:
+		return 'NoSuchStrategyError'
 
 
 	if first_player_move == "R" and second_player_move == "P":

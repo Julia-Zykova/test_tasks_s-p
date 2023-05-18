@@ -5,11 +5,11 @@ def date_in_future(integer):
 	date = datetime.datetime.now()
 
 	if type(integer) != int:
-		return (date.strftime("%d-%m-%Y %H:%M:%S'"))
+		return (date.strftime("%d-%m-%Y %H:%M:%S"))
 
 	else: 
 		future_date = date + timedelta(hours = integer * 24)
-		return (future_date.strftime("%d-%m-%Y %H:%M:%S'"))
+		return (future_date.strftime("%d-%m-%Y %H:%M:%S"))
 
 date_in_future([])
 date_in_future(2)

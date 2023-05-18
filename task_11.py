@@ -41,13 +41,6 @@ class Dessert:
 			return (isinstance(self._calories,int))
 
 
-	def is_delicios(self):
+	def is_delicious(self):
 		return True
 
-c = Dessert("Cupcake", 201)
-print(c.is_delicios())
-print(c.is_healfy())
-
-p = Dessert("Pancake", 195)
-print(p.is_delicios())
-print(p.is_healfy())

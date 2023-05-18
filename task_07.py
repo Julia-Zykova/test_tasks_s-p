@@ -2,7 +2,6 @@ def combine_anagrams(words_array):
 	
 	list_sort = [sorted(list(w.lower())) for w in words_array]
 	new_array = []
-	
 
 	for l in list_sort:
 		ind = [a for a in range(len(list_sort)) if list_sort[a] == l]
@@ -16,7 +15,9 @@ def combine_anagrams(words_array):
 
 		if len(ind) == 1:
 			for x in (ind):
-				new_array.append(words_array[x])
+				non_repeating_word = []
+				non_repeating_word.append(words_array[x])
+				new_array.append(non_repeating_word)
 		else:
 			if list_anagr not in new_array:
 				new_array.append(list_anagr)
