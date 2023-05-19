@@ -1,3 +1,17 @@
+class WrongNumberOfPlayersError(Exception):
+
+	def __init__(self, *arg):
+		super(Exception, self).__init__()
+		self.arg = arg
+	
+	
+class NoSuchStrategyError(Exception):
+	
+	def __init__(self, *arg):
+		super(Exception, self).__init__()
+		self.arg = arg
+	
+
 def rps_game_winner(arg):
 	
 	rps = ['R', 'P','S']
@@ -8,19 +22,13 @@ def rps_game_winner(arg):
 	second_player_move = arg[1][1]
 
 
-	try:
-		if len(arg) > 2:
-			raise Exception('WrongNumberOfPlayersError')
 
-	except Exception:
-		return 'WrongNumberOfPlayersError'
+	if len(arg) > 2:
+		raise WrongNumberOfPlayersError
 
-	try:
-		for i in arg:
+	for i in arg:
 			if i[1] not in rps:
-				raise Exception('NoSuchStrategyError')
-	except Exception:
-		return 'NoSuchStrategyError'
+				raise NoSuchStrategyError
 
 
 	if first_player_move == "R" and second_player_move == "P":
