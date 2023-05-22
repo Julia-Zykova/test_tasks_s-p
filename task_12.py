@@ -35,10 +35,12 @@ class Dessert:
 
 
 	def is_healthy(self):
-		if ((isinstance(self._calories, int)) == True):
-			print(self._calories <= 200)
+		if (isinstance(self._calories, int)) == True:
+			return(self._calories <= 200)
+		elif (isinstance(self._calories, float)) == True:
+			return(self._calories <= 200)
 		else:
-			print(isinstance(self._calories,int))
+			return(isinstance(self._calories,int))
 
 
 	def is_delicious(self):
@@ -61,4 +63,3 @@ class JellyBean(Dessert):
 			return True
 		else:
 			return False
-
